@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroVolumeFader", "ZeroVolumeFader\ZeroVolumeFader.csproj", "{3CF9AFE9-98DB-4F02-AF08-1AADFD1DD828}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroVolumeFader.Tests", "ZeroVolumeFader.Tests\ZeroVolumeFader.Tests.csproj", "{33202CD0-E9FE-440C-93A7-8DF3E8566D2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CF9AFE9-98DB-4F02-AF08-1AADFD1DD828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF9AFE9-98DB-4F02-AF08-1AADFD1DD828}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF9AFE9-98DB-4F02-AF08-1AADFD1DD828}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF9AFE9-98DB-4F02-AF08-1AADFD1DD828}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33202CD0-E9FE-440C-93A7-8DF3E8566D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33202CD0-E9FE-440C-93A7-8DF3E8566D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33202CD0-E9FE-440C-93A7-8DF3E8566D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33202CD0-E9FE-440C-93A7-8DF3E8566D2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
