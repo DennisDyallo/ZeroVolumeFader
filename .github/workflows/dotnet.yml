@@ -25,7 +25,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal --filter "FullyQualifiedName!~_ignoreci"
     - name: Publish
       run: dotnet publish ZeroVolumeFader.CommandLine/ZeroVolumeFader.CommandLine.csproj -r win10-x64 -p:PublishSingleFile=true -p:Configuration=Release -o published
     #- name: Release
