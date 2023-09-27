@@ -27,8 +27,10 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal -e IsAutomatedTest=true
     - name: Publish
-      run: dotnet publish ZeroVolumeFader.CommandLine/ZeroVolumeFader.CommandLine.csproj -r win10-x64 -p:PublishSingleFile=true -p:Configuration=Release -o published
-    #- name: Release
-      #uses: softprops/action-gh-release@v1
-      #with:
-        #files: published/ZeroVolumeFader.CommandLine/ZeroVolumeFader.CommandLine
+      run: dotnet publish ZeroVolumeFader.CommandLine/ZeroVolumeFader.CommandLine.csproj --no-self-contained -r win10-x64 -p:PublishSingleFile=true -p:Configuration=Release -o published
+    - name: Zip
+      run: zip -r "ZeroVolumeFader.CommandLine.zip" ./published
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: ZeroVolumeFader.CommandLine.zip
