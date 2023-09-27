@@ -1,10 +1,18 @@
 using System.Diagnostics;
 using Microsoft.Extensions.Logging.Abstractions;
+using Xunit.Abstractions;
 
 namespace ZeroVolumeFader.Tests;
 
 public class FaderTests
 {
+    private readonly ITestOutputHelper _testOutputHelper;
+
+    public FaderTests(ITestOutputHelper testOutputHelper)
+    {
+        _testOutputHelper = testOutputHelper;
+    }
+
     [Fact]
     public async void CanFadeMockAudioWithinTime()
     {
@@ -18,7 +26,7 @@ public class FaderTests
         Assert.InRange(zeroVolumeFader.Elapsed.TotalSeconds, 2, 2.1);
     }
     
-    [Fact]
+    [IgnoreOnAutomatedBuild]
     public async void CanFadeRealAudioWithinTime()
     {
         var systemAudio = new SystemAudio { Level = 1 };
@@ -32,8 +40,15 @@ public class FaderTests
         systemAudio.Level = 1;
     }
 
-    public class SystemAudioMock : ISystemAudio
+    private class SystemAudioMock : ISystemAudio
     {
         public float Level { get; set; } = 1;
+    }
+    
+    public sealed class IgnoreOnAutomatedBuild : FactAttribute {
+        public IgnoreOnAutomatedBuild() {
+            if(!string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("IsAutomatedTest"))) 
+                Skip = "Ignored on Mono";
+        }
     }
 }
