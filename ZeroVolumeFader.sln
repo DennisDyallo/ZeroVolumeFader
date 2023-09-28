@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroVolumeFader.Tests", "Ze
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroVolumeFader.CommandLine", "ZeroVolumeFader.CommandLine\ZeroVolumeFader.CommandLine.csproj", "{2E445BD2-8642-4A15-A1F9-DB25DA9213FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroVolumeFader.Service", "ZeroVolumeFader.Service\ZeroVolumeFader.Service.csproj", "{59F17B09-8091-45AB-883E-B5AB67F1F242}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{2E445BD2-8642-4A15-A1F9-DB25DA9213FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E445BD2-8642-4A15-A1F9-DB25DA9213FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E445BD2-8642-4A15-A1F9-DB25DA9213FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59F17B09-8091-45AB-883E-B5AB67F1F242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59F17B09-8091-45AB-883E-B5AB67F1F242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59F17B09-8091-45AB-883E-B5AB67F1F242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59F17B09-8091-45AB-883E-B5AB67F1F242}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
